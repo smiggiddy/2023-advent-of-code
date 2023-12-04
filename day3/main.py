@@ -28,31 +28,21 @@ def is_part_number(item, string, count):
     else:
         y_max_index = count + 1
 
-    for i in range (min_index, max_index):
+    for i in range(min_index, max_index):
         print(i)
-        if (
-            string[i]
-            and not string[i].isalnum()
-            and string[i] != "."
-        ):
+        if string[i] and not string[i].isalnum() and string[i] != ".":
             is_part = True
 
     for i in range(min_index, max_index):
-        if (
-            not test_data[y_min_index][i].isalnum()
-            and test_data[y_min_index][i] != "."
-
-        ):
+        if not test_data[y_min_index][i].isalnum() and test_data[y_min_index][i] != ".":
             is_part = True
 
     for i in range(min_index, max_index):
-        if (
-            not test_data[y_max_index][i].isalnum()
-            and test_data[y_max_index][i] != "."
-        ):
+        if not test_data[y_max_index][i].isalnum() and test_data[y_max_index][i] != ".":
             is_part = True
 
     return is_part
+
 
 data = ...
 
