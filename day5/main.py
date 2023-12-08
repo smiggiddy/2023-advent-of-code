@@ -15,9 +15,10 @@ class Almanac:
         factors = self.seeds[1::2]
         seeds = self.seeds[::2]
 
-        for i in range(len(seeds)):
-            self.seeds_2.append(range(int(seeds[i]), (int(seeds[i]) + int(factors[i]))))
-        
+        print(factors, seeds)
+        # for i in range(len(seeds)):
+        #     self.seeds_2.append(range(int(seeds[i]), (int(seeds[i]) + int(factors[i]))))
+        # 
         # print(*self.seeds_2[0])
         self.seeds = self.seeds_2
 
@@ -30,9 +31,7 @@ class Almanac:
                 self.location = s
                 self.map()
 
-                if self.lowest_location == "":
-                    self.lowest_location = self.location
-                elif self.location < int(self.lowest_location):
+                if self.lowest_location == "" or self.location < (int(self.lowest_location)):
                     self.lowest_location = self.location
 
         print("LOWEST LOCATION: ", self.lowest_location)
